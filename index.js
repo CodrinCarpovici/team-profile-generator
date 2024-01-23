@@ -171,3 +171,5 @@ const generateHTML = () => {
         }
     })
 }
+
+gatherTeamInfo();
