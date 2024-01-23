@@ -79,7 +79,7 @@ const menuForTeamMembers = () => {
 // Function to get engineer details
 const engineerPrompt = () => {
   inquirer
-    .promp([
+    .prompt([
       {
         type: "input",
         name: "name",
