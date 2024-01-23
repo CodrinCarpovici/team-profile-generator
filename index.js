@@ -53,5 +53,14 @@ const gatherTeamInfo = () => {
 };
 
 const menuForTeamMembers = () => {
-    
-}
+  inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "memberType",
+        message: "Select the type of team member you want to add:",
+        choices: ["Engineer", "Intern", "Finish building the team"],
+      },
+    ])
+    .then((answer) => {});
+};
