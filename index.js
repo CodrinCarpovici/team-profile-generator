@@ -62,5 +62,14 @@ const menuForTeamMembers = () => {
         choices: ["Engineer", "Intern", "Finish building the team"],
       },
     ])
-    .then((answer) => {});
+    .then((answer) => {
+      if (answer.memberType === "Engineer") {
+        engineerPrompt();
+      } else if (answer.memberType === "Intern") {
+        internPrompt();
+      } else {
+        generateHTML();
+      }
+    })
+    .catch((err) => console.log(err));
 };
