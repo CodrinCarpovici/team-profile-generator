@@ -73,3 +73,30 @@ const menuForTeamMembers = () => {
     })
     .catch((err) => console.log(err));
 };
+
+const engineerPrompt = () => {
+  inquirer
+    .promp([
+      {
+        type: "input",
+        name: "name",
+        message: "Engineer's name:",
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "Engineer's employee ID:",
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "Engineer's email address:",
+      },
+      {
+        type: "input",
+        name: "github",
+        message: "Engineer's GitHub username:",
+      },
+    ])
+    .then((answer) => {});
+};
