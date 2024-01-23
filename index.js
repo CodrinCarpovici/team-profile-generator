@@ -98,5 +98,16 @@ const engineerPrompt = () => {
         message: "Engineer's GitHub username:",
       },
     ])
-    .then((answer) => {});
+    .then((answer) => {
+      const engineer = new Engineer(
+        answer.name,
+        answer.id,
+        answer.email,
+        answer.github
+      );
+      team.push(engineer);
+
+      menuForTeamMembers();
+    })
+    .catch((err) => console.log(err));
 };
