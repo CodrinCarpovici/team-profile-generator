@@ -153,3 +153,21 @@ const internPrompt = () => {
     })
     .catch((err) => console.error(err));
 };
+
+// Function to generate the HTML
+const generateHTML = () => {
+    const html = render(team);
+
+    // Create directory if it doesnt exist
+    if(!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR);
+    }
+
+    fs.writeFile(outputPath, html, (err) => {
+        if(err) {
+            console.error(err);
+        } else {
+            console.log("HTML for the Team has been generated!")
+        }
+    })
+}
