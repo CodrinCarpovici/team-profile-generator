@@ -115,3 +115,29 @@ const engineerPrompt = () => {
     .catch((err) => console.log(err));
 };
 
+// Function to prompt user for intern details
+const internPrompt = () => {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "name",
+        message: "Intern's name:",
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "Intern's employee ID:",
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "Intern's email address:",
+      },
+      {
+        type: "input",
+        name: "school",
+        message: "Intern's school:",
+      },
+    ])
+};
