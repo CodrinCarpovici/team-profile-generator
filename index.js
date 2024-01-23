@@ -115,7 +115,7 @@ const engineerPrompt = () => {
     .catch((err) => console.log(err));
 };
 
-// Function to prompt user for intern details
+// Function to get intern details
 const internPrompt = () => {
   inquirer
     .prompt([
@@ -140,4 +140,16 @@ const internPrompt = () => {
         message: "Intern's school:",
       },
     ])
+    .then((answer) => {
+      const intern = new Intern(
+        answer.name,
+        answer.id,
+        answer.email,
+        answer.school
+      );
+      team.push(intern);
+
+      menuForTeamMembers();
+    })
+    .catch((err) => console.error(err));
 };
