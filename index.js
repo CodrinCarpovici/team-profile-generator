@@ -13,6 +13,7 @@ const render = require("./src/page-template.js");
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 const team = []; // team members array
 
+// First prompt to show up
 const gatherTeamInfo = () => {
   inquirer
     .prompt([
@@ -52,6 +53,7 @@ const gatherTeamInfo = () => {
     .catch((err) => console.error(err));
 };
 
+//Team members prompt menu
 const menuForTeamMembers = () => {
   inquirer
     .prompt([
@@ -74,6 +76,7 @@ const menuForTeamMembers = () => {
     .catch((err) => console.log(err));
 };
 
+// Function to get engineer details
 const engineerPrompt = () => {
   inquirer
     .promp([
@@ -111,3 +114,4 @@ const engineerPrompt = () => {
     })
     .catch((err) => console.log(err));
 };
+
