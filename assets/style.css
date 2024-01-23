@@ -1,8 +1,19 @@
 /* style.css */
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  background-color: #2e67a1;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.team-heading {
+  background-color: #2e67a1;
+  color: #ffffff;
+}
